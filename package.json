@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "server": "json-server -w server/db.json"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,9 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
-    "file-loader": "^6.2.0"
+    "file-loader": "^6.2.0",
+    "json-server": "^0.17.0"
   }
 }

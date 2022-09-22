@@ -2,12 +2,16 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: path.resolve(__dirname, "./src/main.js"),
-  output: { path: path.resolve(__dirname, "build"), filename: "main.js" },
+  entry: {
+    main: path.resolve(__dirname, "./src/main.js"),
+    theory: path.resolve(__dirname, "./src/theory.js"),
+  },
+  output: { path: path.resolve(__dirname, "build"), filename: ["main"].js },
   plugins: [
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, "./src/pages/index.html"),
       filename: "index.html",
+      chunks: ["main", "theory"],
     }),
   ],
   module: {
@@ -21,5 +25,11 @@ module.exports = {
         type: "asset/resource",
       },
     ],
+  },
+  devServer: {
+    port: 8080,
+    static: {
+      directory: path.join(__dirname, "src"),
+    },
   },
 };
