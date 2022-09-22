@@ -1,12 +1,11 @@
 {
   "data": [
     {
-      "value": "Купити ковбаси",
-      "checked": false,
+      "value": "Купити огірків",
       "id": 2
     },
     {
-      "value": "Купити хліба",
+      "value": "Купити риби!",
       "checked": true,
       "id": 3
     },
@@ -29,6 +28,19 @@
       "firstName": "Fred",
       "lastName": "Flintstone",
       "id": 10
+    },
+    {
+      "value": "Купити помідорів!",
+      "id": 11
+    },
+    {
+      "value": "Купити помідорів!",
+      "id": 12
+    },
+    {
+      "firstName": "Fred",
+      "lastName": "Flintstone",
+      "id": 13
     }
   ]
 }
