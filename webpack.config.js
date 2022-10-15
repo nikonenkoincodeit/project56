@@ -4,13 +4,14 @@ const path = require("path");
 module.exports = {
   entry: {
     main: path.resolve(__dirname, "./src/main.js"),
+    searchForm: path.resolve(__dirname, "./src/js/searchForm.js"),
   },
   output: { path: path.resolve(__dirname, "build"), filename: ["main"].js },
   plugins: [
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, "./src/pages/index.html"),
       filename: "index.html",
-      chunks: ["main"],
+      chunks: ["main", "searchForm"],
     }),
   ],
   module: {
