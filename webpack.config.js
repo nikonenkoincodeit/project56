@@ -4,14 +4,13 @@ const path = require("path");
 module.exports = {
   entry: {
     main: path.resolve(__dirname, "./src/main.js"),
-    theory: path.resolve(__dirname, "./src/theory.js"),
   },
   output: { path: path.resolve(__dirname, "build"), filename: ["main"].js },
   plugins: [
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, "./src/pages/index.html"),
       filename: "index.html",
-      chunks: ["main", "theory"],
+      chunks: ["main"],
     }),
   ],
   module: {
